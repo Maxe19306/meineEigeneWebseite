@@ -1,0 +1,15 @@
+header {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    .container-links {
+        margin-right: 10px;
+    }
+    a {
+        color: white;
+        margin-left: 15px;
+        text-decoration: none;
+    }
+}
