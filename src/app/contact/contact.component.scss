@@ -1,0 +1,22 @@
+.container-contact {
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        margin-top: 0;
+        padding-top: 30px;
+        font-size: 35px;
+        letter-spacing: 1px;
+        color: aquamarine;
+    }
+    a {
+        text-decoration: none;
+        color: aquamarine;
+        &:hover {
+            text-decoration: underline;
+            color: rgba(127, 255, 212, 0.7);
+        }
+    }
+}
