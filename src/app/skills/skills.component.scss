@@ -1,4 +1,6 @@
 .container-skills {
+    padding-top: 15px;
+    padding-bottom: 20px;
     background-color: rgb(61, 58, 58);
     display: flex;
     align-items: center;
@@ -29,14 +31,20 @@
                 height: 70px;
                 border-radius: 8px;
             }
-            img {
-                background-color: white;
-                padding: 10px;
-                height: 40px;
-                border-radius: 100%;
-                border: 3px rgba(0, 0, 0, 0.5) solid;
+            .skill-image-container {
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 margin-bottom: -25px;
-                z-index: 1;
+                background-color: rgb(61, 58, 58);
+                border: 3px rgba(0, 0, 0, 0.5) solid;
+                z-index: 2;
+                height: 80px;
+                width: 80px;
+                border-radius: 100%;
+            }
+            img {
+                height: 55%;
             }
         }
     }

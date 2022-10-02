@@ -24,15 +24,19 @@
         align-items: center;
     }
     .arrow {
+        margin: 0;
         background-color: transparent;
         color: white;
         font-size: 50px;
         border-radius: 100%;
         border-color: gray;
         width: 50px;
-        cursor: pointer;
+        cursor: context-menu;
     }
     .contact {
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 13px;
         background-color: transparent;
         color: white;
         border: 3px solid white;
