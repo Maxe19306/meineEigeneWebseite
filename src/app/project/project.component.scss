@@ -1,0 +1,40 @@
+img {
+    height: 350px;
+    padding-top: 5px;
+    margin: 15px;
+    width: 622px;
+}
+
+.project-container {
+    .info-button {
+        padding: 20px;
+        height: 25px;
+        position: absolute;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    }
+    .d-none {
+        display: none !important;
+    }
+    .Info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        height: 350px;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 5px;
+        margin: 15px;
+        width: 622px;
+    }
+    .project-container-links {
+        display: flex;
+        a {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}

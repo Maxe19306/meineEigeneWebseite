@@ -1,14 +1,21 @@
-<header>
+<header [class.whiteHeader]="whiteMode">
+    <div class="header-container">
+        <a routerLink="/"><img src="./../assets/img/iconpclogo.png" alt=""></a>
+        <div class="container-links">
 
-    <a routerLink="/"><img src="./../assets/img/pokeball-icon.png" alt=""></a>
-    <div class="container-links">
-        <a href="#">Start</a>
 
-        <a href="#container-about-me">Über mich</a>
+            <a translate href="#">Start</a>
 
-        <a href="#container-skills">Skills</a>
+            <a translate href="#container-about-me">Über mich</a>
 
-        <a href="#container-projects">Portfolio</a>
+            <a translate href="#container-skills">Skills</a>
+
+            <a translate href="#container-projects">Portfolio</a>
+            <div id="settings" class="d-none settings">
+                <p>english translate</p>
+                <button (click)="darkmode()">Darkmode</button>
+            </div>
+            <img (click)="openSettings()" src="./../assets/img/settings-button.png" alt="">
+        </div>
     </div>
-
 </header>

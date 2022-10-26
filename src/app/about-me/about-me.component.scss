@@ -1,6 +1,6 @@
 .container-about-me {
     padding-top: 50px;
-    background-color: rgb(61, 58, 58);
+    background-color: #615F58;
     color: white;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@
     .about-me {
         display: flex;
         height: 300px;
-        width: 80%;
+        width: 77.5%;
         justify-content: space-evenly;
         border-bottom: 2px solid aquamarine;
         img {
@@ -44,5 +44,16 @@
         .about-text {
             width: 200px;
         }
+    }
+}
+
+.whiteContainerAboutMe {
+    background-color: rgb(236, 205, 163);
+    color: black;
+    .image-container-about-me {
+        background-color: green !important;
+    }
+    .about-me {
+        border-bottom: 2px solid green;
     }
 }

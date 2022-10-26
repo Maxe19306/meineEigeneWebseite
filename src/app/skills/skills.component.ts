@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class SkillsComponent implements OnInit {
 
   constructor() { }
-
+  whiteMode = false;
   ngOnInit(): void {
   }
 

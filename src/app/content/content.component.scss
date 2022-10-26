@@ -1,33 +1,38 @@
 .content-container {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     background-color: black;
     color: white;
     align-items: center;
+    width: 100%;
     padding-bottom: 50px;
+    height: calc(100vh - 100px);
     img {
-        height: 300px;
-        background-color: lightcoral;
+        height: 450px;
         border-radius: 100%;
-        padding: 20px;
+        padding: 20px 20px 0px 20px;
+        background-color: lightcoral;
     }
     .headline {
-        font-size: 50px;
+        font-size: 65px;
         h2 {
             margin-top: 0;
+            transform: scale(0.94);
+            animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
         }
     }
     .test {
-        width: 100%;
+        width: 80%;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
     }
     .arrow {
         margin: 0;
         background-color: transparent;
         color: white;
-        font-size: 50px;
+        font-size: 70px;
         border-radius: 100%;
         border-color: gray;
         width: 50px;
@@ -36,7 +41,7 @@
     .contact {
         border-radius: 8px;
         text-decoration: none;
-        font-size: 13px;
+        font-size: 20px;
         background-color: transparent;
         color: white;
         border: 3px solid white;
@@ -47,5 +52,89 @@
             border: 3px solid black;
             background-color: gray;
         }
+    }
+}
+
+.whiteContent {
+    background-color: white;
+    color: black;
+    .whiteContact {
+        color: black;
+        border: 3px solid black;
+        &:hover {
+            color: white;
+            border: 3px solid black;
+            background-color: gray;
+        }
+    }
+}
+
+@keyframes scale {
+    100% {
+        transform: scale(1);
+    }
+}
+
+span {
+    opacity: 0;
+    filter: blur(4px);
+}
+
+span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(5) {
+    animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(6) {
+    animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(7) {
+    animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(8) {
+    animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(9) {
+    animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(10) {
+    animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(11) {
+    animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(12) {
+    animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+span:nth-child(13) {
+    animation: fade-in 0.8s 1.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+@keyframes fade-in {
+    100% {
+        opacity: 1;
+        filter: blur(0);
     }
 }

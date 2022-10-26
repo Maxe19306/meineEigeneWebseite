@@ -1,21 +1,27 @@
-<div id="container-contact" class="container-contact">
+<div *ngIf="mailsending" class="sendEmail">Ihre E-Mail wurde versendet</div>
+
+<div [class.whiteContainerContact]="whiteMode" [class.animation]="wait" class="container-contact" id='containerContact'>
+
     <div>
-        <h3>Kontaktiere mich gerne</h3>
-        <p> Gerne können Sie mich über das Kontaktformular oder über meine E-Mail: <a href="mailto: maximilianbruhn@gmx.de ">maximilianbruhn@gmx.de </a> kontaktieren. </p>
+        <h3 translate>Kontaktieren Sie mich gerne</h3>
+        <p translate> Gerne können Sie mich über das Kontaktformular oder über meine E-Mail: <a href="mailto: maximilianbruhn@gmx.de ">maximilianbruhn@gmx.de </a> kontaktieren. </p>
 
-        <form action="" method="post">
+        <form (submit)="sendMail()" ngNativeValidate #myForm>
             <div>
-                <p>Name</p>
-                <input type="text" placeholder="Ihr Name">
+                <p translate>Name</p>
+                <input required #nameField name="name" type="text" placeholder="Ihr Name">
 
-                <p>E-Mail Adresse</p>
-                <input type="email" name="" id="" placeholder="Ihre E-Mail">
+                <div>
+                    <p translate>E-Mail Adresse</p>
+                    <input required #emailField type="email" name="mail" placeholder="Ihre E-Mail">
+                </div>
 
-                <p>Deine Nachricht</p>
-                <input type="text" placeholder="Ihre Nachricht">
+                <p translate>Ihre Nachricht</p>
+                <textarea required #messageField name="message" type="text" placeholder="Ihre Nachricht"></textarea>
+
             </div>
             <div class="container-button">
-                <button class="contact-button">Absenden</button>
+                <button translate #contactButton type="submit" class="contact-button">Absenden</button>
             </div>
         </form>
     </div>

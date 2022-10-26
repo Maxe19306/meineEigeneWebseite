@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(public translate: TranslateService) {
+    // the lang to use, if the lang isn't available, it will use the current loader to get them
+    translate.use('de');
+    this.whiteMode = false;
+}
+whiteMode;
   title = 'meineEigeneWebseite';
+
+
 }
