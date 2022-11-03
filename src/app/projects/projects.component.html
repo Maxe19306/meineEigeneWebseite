@@ -1,20 +1,17 @@
-<div [class.whiteContainerProjects]="whiteMode" id="container-projects" class="container-projects">
+<div [class.whiteContainerProjects]="this.main.whiteMode" id="container-projects" class="container-projects">
     <h2 translate>Meine Projekte</h2>
     <div class="container-buttons-projects">
         <button translate (click)="allProjects()">Alle</button>
         <button translate (click)="AngularProjects()">Angular</button>
         <button translate (click)="JavascriptsProjects()">Javascript</button>
+
     </div>
     <div class="container-image-projects">
 
-        <app-project *ngIf="javascript" [image]='InfosProjects[0]' [description]='description[0]'>
-        </app-project>
-        <app-project *ngIf="javascript" [image]='InfosProjects[1]' [description]='description[1]'>
-        </app-project>
-        <app-project *ngIf="angular" [image]='InfosProjects[2]' [description]='description[2]'>
-        </app-project>
-        <app-project *ngIf="angular" [image]='InfosProjects[3]' [description]='description[3]'>
-        </app-project>
+        <app-project *ngFor="let hallo of InfosProjects2; let i = index" [image]='image[i]' [language]='language[i]'> </app-project>
+
+
+
 
     </div>
 </div>

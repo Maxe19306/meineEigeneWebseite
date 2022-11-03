@@ -1,4 +1,5 @@
-<div (mouseleave)="test2()" (mouseenter)="test()" class="project-container">
+<div *ngIf='{language}' (mouseleave)="test2()" (mouseenter)="test()" class="project-container">
+
     <div id="info" class="Info d-none">
         <p> {{description}}</p>
         <div class="project-container-links">

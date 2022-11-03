@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-projects',
@@ -7,19 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
-  InfosProjects2 =[
+  constructor(public main: AppComponent) {
+  }
+  
+  angular = false;
+  javascript = true;
+  whiteMode = this.main.whiteMode;
+
+  InfosProjects2: any[] =[
     {
-      image :"./../assets/img/ElPolloLoco.png",
-      descriptions: "El Pollo Loco - Ein run-and-jump Spiel mit Javascript",
       LinkProject: "",
-      LinkGit: "",
+      LinkGit: "https://github.com/Maxe19306/El-Pollo-Loco",
       Language:"javascript",
     },
     {
       image :"./../assets/img/Join.png",
       descriptions: "Join - eine App für die Zuordnung der Aufgaben",
       LinkProject: "",
-      LinkGit: "",
+      LinkGit: "https://github.com/Maxe19306/Join",
       Language:"javascript",
     },
     {
@@ -27,7 +33,7 @@ export class ProjectsComponent implements OnInit {
       descriptions: "Platzhalter - hier kommt die erste Angular App rein",
       LinkProject: "",
       LinkGit: "",
-      Language:"angular",
+      Language: 'angular',
     },
     {
       image :"./../assets/img/ElPolloLoco.png",
@@ -39,7 +45,7 @@ export class ProjectsComponent implements OnInit {
   ]
 
 
-  InfosProjects = [
+  image = [
     './../assets/img/ElPolloLoco.png',
     './../assets/img/Join.png',
     './../assets/img/Join.png',
@@ -53,11 +59,12 @@ export class ProjectsComponent implements OnInit {
     'Platzhalter 2 - hier kommt die zweite Angular App rein',
   ]
 
-  angular = true;
-  javascript = true;
-  whiteMode = false;
-  constructor() {
-      }
+  language=[
+    'javascript',
+    'javascript',
+    'angular',
+    'angular',
+  ]
  
 
   ngOnInit(): void {
@@ -75,6 +82,5 @@ export class ProjectsComponent implements OnInit {
       this.angular = false;
       this.javascript = true;
      }
-
     
     }

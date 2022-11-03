@@ -1,5 +1,5 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
-
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
@@ -13,10 +13,10 @@ export class ContactComponent implements OnInit {
 @ViewChild('contactButton') contactButton: ElementRef;
 @ViewChild('containerContact') containerContact: any;
 
-whiteMode = false;
+whiteMode = this.main.whiteMode;
 wait = false;
 mailsending = false;
-  constructor() { }
+  constructor(public main: AppComponent) { }
 
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AppComponent } from '../app.component';
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SkillsComponent implements OnInit {
 
-  constructor() { }
-  whiteMode = false;
+  constructor(public main: AppComponent) { }
+  whiteMode = this.main.whiteMode;
   ngOnInit(): void {
   }
 

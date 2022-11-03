@@ -17,6 +17,9 @@
             width: 250px;
             margin-right: 15px;
             margin-left: 15px;
+            p {
+                text-align: center;
+            }
             .image-container-about-me {
                 display: flex;
                 align-items: center;
@@ -43,6 +46,11 @@
         }
         .about-text {
             width: 200px;
+        }
+        p,
+        h3 {
+            font-size: 35px;
+            width: 500px;
         }
     }
 }

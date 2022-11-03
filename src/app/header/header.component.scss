@@ -21,12 +21,22 @@ header {
         align-items: center;
         margin-right: 10px;
         .settings {
+            border: 1px solid wheat;
             z-index: 1;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
             background-color: black;
             position: absolute;
             right: 18%;
             color: white;
             display: flex;
+            button {
+                color: white;
+                background-color: black;
+            }
         }
         .d-none {
             display: none;

@@ -1,5 +1,6 @@
 import { transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { AppComponent } from '../app.component';
 
 @Component({
   selector: 'app-content',
@@ -8,8 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
-  whiteMode = false;
+  constructor(public main: AppComponent) { }
+  whiteMode = this.main.whiteMode;
   ngOnInit(): void {
   }
 

@@ -1,4 +1,4 @@
-<header [class.whiteHeader]="whiteMode">
+<header [class.whiteHeader]="this.main.whiteMode">
     <div class="header-container">
         <a routerLink="/"><img src="./../assets/img/iconpclogo.png" alt=""></a>
         <div class="container-links">
@@ -12,8 +12,11 @@
 
             <a translate href="#container-projects">Portfolio</a>
             <div id="settings" class="d-none settings">
-                <p>english translate</p>
-                <button (click)="darkmode()">Darkmode</button>
+                <div>
+                    <p><span (click)="this.main.translate.use('de')">DE|</span> <span (click)="this.main.translate.use('en')">EN</span></p>
+                </div>
+
+                <button (click)="darkmode()"> DARKMODE </button>
             </div>
             <img (click)="openSettings()" src="./../assets/img/settings-button.png" alt="">
         </div>
