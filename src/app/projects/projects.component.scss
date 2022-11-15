@@ -4,6 +4,8 @@
     flex-direction: column;
     background-color: black;
     color: white;
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 50px;
     padding-bottom: 50px;
     h2 {
@@ -13,6 +15,12 @@
     .container-buttons-projects {
         display: flex;
         justify-content: space-between;
+        .buttonDisabled {
+            color: black;
+            border: 3px solid black;
+            background-color: gray;
+            cursor: not-allowed;
+        }
         button {
             border: solid 1px white;
             background-color: black;
@@ -31,10 +39,9 @@
         }
     }
     .container-image-projects {
-        width: 350px;
         display: flex;
-        width: 90%;
-        justify-content: space-around;
+        width: 100%;
+        justify-content: space-between;
         flex-wrap: wrap;
     }
 }
@@ -43,6 +50,12 @@
     background-color: white;
     color: black;
     .container-buttons-projects {
+        .buttonDisabled {
+            border: 1px solid black;
+            &:hover {
+                color: black;
+            }
+        }
         button {
             border: solid 1px black;
             background-color: white;
@@ -52,6 +65,169 @@
                 border: 1px solid black;
                 background-color: gray;
             }
+        }
+    }
+}
+
+img {
+    height: 300px;
+    width: 500px;
+    padding-top: 5px;
+    margin: 15px;
+}
+
+.project-container {
+    .info-button {
+        padding: 20px;
+        height: 25px;
+        position: absolute;
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    }
+    .Info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        height: 300px;
+        width: 500px;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+        padding-top: 5px;
+        margin: 15px;
+        font-size: 20px;
+        text-align: center;
+        a {
+            text-decoration: none;
+            color: white !important;
+            border-radius: 8px;
+            padding: 15px;
+            min-width: 150px;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .project-container-links {
+        display: flex;
+        a {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+    }
+}
+
+@media(max-width: 1550px) {
+    img {
+        height: 250px;
+        width: 400px;
+    }
+    .Info {
+        height: 250px !important;
+        width: 400px !important;
+    }
+}
+
+@media(max-width: 1250px) {
+    img {
+        height: 210px;
+        width: 350px;
+    }
+    .Info {
+        height: 210px !important;
+        width: 350px !important;
+    }
+}
+
+@media(max-width: 1105px) {
+    img {
+        height: 168px;
+        width: 280px;
+    }
+    .Info {
+        height: 168px !important;
+        width: 280px !important;
+    }
+    .project-container-links {
+        flex-direction: column;
+    }
+    .project-container {
+        .Info {
+            font-size: 15px;
+        }
+    }
+}
+
+@media(max-width: 910px) {
+    img {
+        height: 250px;
+        width: 400px;
+    }
+    .Info {
+        height: 250px !important;
+        width: 400px !important;
+    }
+    .container-projects {
+        .container-image-projects {
+            justify-content: center;
+        }
+    }
+    .project-container {
+        .Info {
+            font-size: 20px;
+        }
+    }
+}
+
+@media(max-width: 580px) {
+    img {
+        height: 168px;
+        width: 280px;
+    }
+    .Info {
+        height: 168px !important;
+        width: 280px !important;
+    }
+    .container-projects {
+        .container-buttons-projects {
+            button {
+                min-width: 75px;
+                height: 35px;
+                font-size: 12px;
+            }
+        }
+    }
+    .project-container {
+        .Info {
+            font-size: 15px;
+        }
+    }
+}
+
+@media(max-width: 370px) {
+    img {
+        height: 120px;
+        width: 200px;
+    }
+    .Info {
+        height: 120px !important;
+        width: 200px !important;
+    }
+    .container-projects {
+        .container-buttons-projects {
+            button {
+                min-width: 40px;
+                height: 23px;
+                font-size: 9px;
+            }
+        }
+    }
+    .project-container {
+        .Info {
+            font-size: 9px;
         }
     }
 }

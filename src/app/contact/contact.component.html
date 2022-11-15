@@ -1,4 +1,4 @@
-<div *ngIf="mailsending" class="sendEmail">Ihre E-Mail wurde versendet</div>
+<div [class.whitesendEmail]="this.main.whiteMode" *ngIf="mailsending" class="sendEmail" translate>Ihre E-Mail wurde versendet</div>
 
 <div [class.whiteContainerContact]="this.main.whiteMode" [class.animation]="wait" class="container-contact" id='containerContact'>
 
@@ -9,15 +9,15 @@
         <form (submit)="sendMail()" ngNativeValidate #myForm>
             <div>
                 <p translate>Name</p>
-                <input required #nameField name="name" type="text" placeholder="Ihr Name">
+                <input required #nameField name="name" type="text" placeholder="Ihr Name//Your name">
 
                 <div>
                     <p translate>E-Mail Adresse</p>
-                    <input required #emailField type="email" name="mail" placeholder="Ihre E-Mail">
+                    <input required #emailField type="email" name="mail" placeholder="Ihre Email-Adresse//Your email address">
                 </div>
 
                 <p translate>Ihre Nachricht</p>
-                <textarea required #messageField name="message" type="text" placeholder="Ihre Nachricht"></textarea>
+                <textarea required #messageField name="message" type="text" placeholder="Ihre Nachricht//Your message"></textarea>
 
             </div>
             <div class="container-button">

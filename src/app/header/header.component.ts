@@ -8,24 +8,25 @@ import { AppComponent } from '../app.component';
 })
 export class HeaderComponent implements OnInit {
   whiteMode = this.main.whiteMode;
+  Darkmode = true;
   constructor(public main: AppComponent) {
    }
 
-  ngOnInit(): void {
-    console.log(this.whiteMode)
-  }
+  ngOnInit(): void {}
 
   openSettings(){
     document.getElementById('settings').classList.toggle('d-none')
   }
-  huhu(){
-    console.log(this.main.whiteMode)
+  openMenu(){
+    document.getElementById('menu').classList.toggle('menu')
   }
   darkmode(){
     if (this.main.whiteMode) {
      this.main.whiteMode = false;
+     document.getElementById('mode').innerHTML = 'ON';
      }
   else{ 
-    this.main.whiteMode = true;}
+    this.main.whiteMode = true;
+    document.getElementById('mode').innerHTML = 'OFF'}
   }
 }

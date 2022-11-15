@@ -1,4 +1,6 @@
 .container-about-me {
+    padding-left: 15%;
+    padding-right: 15%;
     padding-top: 50px;
     background-color: #615F58;
     color: white;
@@ -6,9 +8,10 @@
     align-items: center;
     flex-direction: column;
     .container-lines {
+        width: 100%;
         margin-top: 20px;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-bottom: 20px;
         .container-line {
             display: flex;
@@ -36,20 +39,19 @@
         }
     }
     .about-me {
+        width: 100%;
         display: flex;
-        height: 300px;
-        width: 77.5%;
         justify-content: space-evenly;
+        padding-bottom: 15px;
         border-bottom: 2px solid aquamarine;
+        align-items: center;
         img {
             height: 250px;
         }
-        .about-text {
-            width: 200px;
-        }
         p,
         h3 {
-            font-size: 35px;
+            text-align: center;
+            font-size: 25px;
             width: 500px;
         }
     }
@@ -63,5 +65,95 @@
     }
     .about-me {
         border-bottom: 2px solid green;
+    }
+}
+
+@media (max-width:930px) {
+    .container-about-me {
+        .about-me {
+            p {
+                font-size: 20px;
+            }
+            img {
+                height: 230px;
+            }
+        }
+        .container-lines {
+            flex-wrap: wrap;
+            font-size: 15px;
+            img {
+                height: 20px !important;
+            }
+            .container-line {
+                .image-container-about-me {
+                    height: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:890px) {
+    .container-about-me {
+        .about-me {
+            flex-direction: column;
+        }
+    }
+}
+
+@media (max-width:890px) {
+    .container-about-me {
+        .container-lines {
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width:650px) {
+    .container-about-me {
+        .about-me {
+            p {
+                width: 400px;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .container-about-me {
+        .about-me {
+            img {
+                height: 200px;
+            }
+            p {
+                width: 320px;
+                font-size: 17px;
+            }
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .container-about-me {
+        .about-me {
+            p {
+                width: 250px;
+                font-size: 15px;
+            }
+        }
+        .container-lines {
+            font-size: 13px;
+        }
+    }
+}
+
+@media (max-width:300px) {
+    .container-about-me {
+        .about-me {
+            p {
+                width: 190px;
+                font-size: 13px;
+            }
+        }
     }
 }

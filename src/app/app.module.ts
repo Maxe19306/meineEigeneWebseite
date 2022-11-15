@@ -13,7 +13,6 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ProjectComponent } from './project/project.component';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import {TranslateModule, TranslateLoader} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
@@ -36,7 +35,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     ImprintComponent,
     PrivacyComponent,
-    ProjectComponent
   ],
   imports: [
     BrowserModule,

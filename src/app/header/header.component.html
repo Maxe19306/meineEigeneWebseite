@@ -2,23 +2,32 @@
     <div class="header-container">
         <a routerLink="/"><img src="./../assets/img/iconpclogo.png" alt=""></a>
         <div class="container-links">
+            <div id="menu" class="menu">
 
+                <a translate href="#">Start</a>
 
-            <a translate href="#">Start</a>
+                <a translate href="#container-about-me">Über mich</a>
 
-            <a translate href="#container-about-me">Über mich</a>
+                <a translate href="#container-skills">Skills</a>
 
-            <a translate href="#container-skills">Skills</a>
+                <a translate href="#container-projects">Portfolio</a>
 
-            <a translate href="#container-projects">Portfolio</a>
-            <div id="settings" class="d-none settings">
+            </div>
+
+            <div [class.Whitesettings]="this.main.whiteMode" id="settings" class="d-none settings">
                 <div>
-                    <p><span (click)="this.main.translate.use('de')">DE|</span> <span (click)="this.main.translate.use('en')">EN</span></p>
+                    <p translate> Sprache: <span (click)="this.main.translate.use('de')">DE|</span> <span (click)="this.main.translate.use('en')">EN</span></p>
                 </div>
 
-                <button (click)="darkmode()"> DARKMODE </button>
+                <div class="setting-mode">
+                    <p>Darkmode:</p> <button id="mode" (click)="darkmode()"> ON </button>
+                </div>
             </div>
-            <img (click)="openSettings()" src="./../assets/img/settings-button.png" alt="">
+            <div class="header-buttons">
+                <img (click)="openSettings()" src="./../assets/img/settings-button.png" alt="">
+
+                <img class="menuImage" (click)="openMenu()" src="./../assets/img/menu-responsiv.png" alt="">
+            </div>
         </div>
     </div>
 </header>

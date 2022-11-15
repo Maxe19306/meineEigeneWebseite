@@ -51,7 +51,7 @@ mailsending = false;
    fd.append('name',nameField.value);
     fd.append('message',messageField.value);
 
-  await fetch('https://maximilian-bruhn.developerakademie.net/send_mail/send_mail.php',
+  await fetch('https://maximilian-bruhn.developerakademie.net/send_mail2/send_mail.php',
   {
   method: 'POST',
   body: fd

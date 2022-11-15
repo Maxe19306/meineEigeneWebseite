@@ -2,6 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 175px;
-    margin-right: 150px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+//fertig
+@media(max-width: 930px) {
+    .privacy-container {
+        font-size: 13px;
+    }
 }
