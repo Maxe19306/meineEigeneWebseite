@@ -6,7 +6,6 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
-  whiteMode = this.main.whiteMode;
   constructor(public main: AppComponent) { }
   ngOnInit(): void {
   }

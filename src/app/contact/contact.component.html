@@ -1,28 +1,43 @@
-<div [class.whitesendEmail]="this.main.whiteMode" *ngIf="mailsending" class="sendEmail" translate>Ihre E-Mail wurde versendet</div>
+<div class="sendEmail" *ngIf="mailsending" translate>Ihre E-Mail wurde versendet</div>
 
-<div [class.whiteContainerContact]="this.main.whiteMode" [class.animation]="wait" class="container-contact" id='containerContact'>
 
-    <div>
-        <h3 translate>Kontaktieren Sie mich gerne</h3>
-        <p translate> Gerne können Sie mich über das Kontaktformular oder über meine E-Mail: <a href="mailto: maximilianbruhn@gmx.de ">maximilianbruhn@gmx.de </a> kontaktieren. </p>
+<div [class.animation]="wait" class="container-contact" id='containerContact'>
 
-        <form (submit)="sendMail()" ngNativeValidate #myForm>
-            <div>
-                <p translate>Name</p>
-                <input required #nameField name="name" type="text" placeholder="Ihr Name//Your name">
+    <div class="headline">
+        <div class="hl1"></div>
+        <h2 translate>Kontakt</h2>
+    </div>
+    <div class="contact">
+        <div class="text-contact">
+            <h3 translate>Haben Sie ein Problem zu lösen?</h3>
+            <p translate> Benötigen Sie einen Frontend-Devepoler? Kontaktieren Sie mich gerne über dieses Formular. Ich bin daran interessiert Ihnen zu zuhören, Ihre Ideen zu kennen und mit meiner Arbeit zu Ihren Projekten beizutragen. </p>
 
+            <p translate> Kontaktieren Sie mich gerne!</p>
+
+
+        </div>
+
+        <div>
+            <form [class.animation]="wait" (submit)="sendMail()" ngNativeValidate #myForm>
                 <div>
-                    <p translate>E-Mail Adresse</p>
-                    <input required #emailField type="email" name="mail" placeholder="Ihre Email-Adresse//Your email address">
+                    <input required #nameField name="name" type="text" placeholder="Ihr Name//Your name">
+
+                    <div>
+                        <input required #emailField type="email" name="mail" placeholder="Ihre Email-Adresse//Your email address">
+                    </div>
+
+                    <textarea required #messageField name="message" type="text" placeholder="Ihre Nachricht//Your message"></textarea>
+
                 </div>
+                <div class="container-button">
+                    <button translate #contactButton type="submit" class="contact-button">Absenden</button>
+                </div>
+            </form>
 
-                <p translate>Ihre Nachricht</p>
-                <textarea required #messageField name="message" type="text" placeholder="Ihre Nachricht//Your message"></textarea>
+        </div>
+    </div>
+    <div class="bg-image">
 
-            </div>
-            <div class="container-button">
-                <button translate #contactButton type="submit" class="contact-button">Absenden</button>
-            </div>
-        </form>
+        <img src="assets/img/background/Purple shadow 4.png" alt="">
     </div>
 </div>

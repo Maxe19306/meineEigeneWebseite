@@ -2,13 +2,42 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 15%;
-    margin-right: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
     height: calc(100vh - 200px);
+    background-color: #141D2F;
+    color: white;
+    a {
+        text-decoration: none;
+        color: white;
+        &:hover {
+            color: #70E61C;
+        }
+    }
 }
 
 //fertig
-@media(max-width: 400px) {
+@media(max-width:1000px) {
+    .impressum-container {
+        height: 100%;
+    }
+}
+
+@media (max-width: 800px) {
+    .impressum-container {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (max-width: 600px) {
+    .impressum-container {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}
+
+@media(max-width: 450px) {
     .impressum-container {
         font-size: 12px;
     }

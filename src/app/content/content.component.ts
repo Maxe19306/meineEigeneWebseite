@@ -10,7 +10,6 @@ import { AppComponent } from '../app.component';
 export class ContentComponent implements OnInit {
 
   constructor(public main: AppComponent) { }
-  whiteMode = this.main.whiteMode;
   ngOnInit(): void {
   }
 

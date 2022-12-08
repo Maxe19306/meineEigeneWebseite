@@ -10,13 +10,8 @@ export class ProjectsComponent implements OnInit {
 
   constructor(public main: AppComponent) {
   }
-  placeholder = false;
-  infoElPollo = false;
-  infoJoin = false;
-  infoPortfolio = false;
   angular = true;
   javascript = true;
-  whiteMode = this.main.whiteMode;
   buttonJavascript = false;
   buttonAngular = false;
 
@@ -43,32 +38,4 @@ export class ProjectsComponent implements OnInit {
       this.buttonAngular = false;
      }
     
-     openInfoElPollo(){
-      this.infoElPollo = true;
      }
-
-     closeInfoElPollo(){
-      this.infoElPollo = false;
-     }
-
-     openInfoJoin(){
-      this.infoJoin = true;
-     }
-     closeInfoJoin(){
-      this.infoJoin = false;
-     }
-
-     openInfoPortfolio(){
-      this.infoPortfolio = true;
-     }
-
-     closeInfoPortfolio(){
-      this.infoPortfolio = false;
-     }
-     openInfoPlaceholder(){
-      this.placeholder = true;
-     }
-
-    closeInfoPlaceholder(){
-      this.placeholder = false;
-    } }

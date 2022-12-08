@@ -4,7 +4,13 @@ html {
 
 body {
     margin: 0;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'poppins';
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: 'poppins';
+    src: url('assets/fonts/poppins.ttf');
 }
 
 

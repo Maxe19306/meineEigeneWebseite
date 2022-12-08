@@ -1,19 +1,24 @@
-<div [class.whiteContent]="this.main.whiteMode" class="content-container">
-    <div class="test">
-        <div class="headline">
-            <h2> <span translate>Hey,</span> <br> <span translate> ich</span> <span translate> bin</span> <br> <span> Maximilian</span> <span> Bruhn</span>
-                <br> <span translate> und</span>
-                <br> <span>Front</span> <span> End</span> <span translate> Entwickler</span> </h2>
-            <a translate [class.whiteContact]="this.main.whiteMode" href="#containerContact" class="contact">Kontaktieren Sie mich gerne</a>
+<div class="content-container" id="content">
+
+    <div class="headline">
+        <img src="assets/img/application/Bwerbungsfoto2.png" alt="">
+
+        <div class="lala">
+            <div class="text">
+
+                <div translate class="rotate">Ich bin</div>
+                <div>
+                    <p translate class="Name"> Maximilian Bruhn</p>
+                    <p translate class="colored-text"> Frontend Entwickler</p>
+
+                </div>
+            </div>
+
+            <a href="#containerContact"><button translate>Kontaktformular</button></a>
         </div>
-        <img src="./../assets/img/Bwerbungsfoto2.png" alt="">
     </div>
-
-    <p class="arrow">&dArr;</p>
-
-
 </div>
+<app-about-me></app-about-me>
 <app-skills></app-skills>
 <app-projects></app-projects>
-<app-about-me></app-about-me>
 <app-contact></app-contact>

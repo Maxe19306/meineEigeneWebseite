@@ -6,14 +6,12 @@ import { AppComponent } from '../app.component';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit {
-@ViewChild('myForm') myForm: ElementRef;
 @ViewChild('nameField') nameField: ElementRef;
 @ViewChild('messageField') messageField: ElementRef;
 @ViewChild('emailField') emailField: ElementRef;
 @ViewChild('contactButton') contactButton: ElementRef;
 @ViewChild('containerContact') containerContact: any;
 
-whiteMode = this.main.whiteMode;
 wait = false;
 mailsending = false;
   constructor(public main: AppComponent) { }
@@ -29,12 +27,12 @@ mailsending = false;
     let messageField = this.messageField.nativeElement;
     let contactButton = this.contactButton.nativeElement;
     this.disabledContactForm(nameField,emailField,messageField,contactButton)
-    await this.sendingMail(nameField,emailField,messageField);
+  
+ await this.sendingMail(nameField,emailField,messageField);
     this.MailSent();
     this.wait = false;
     this.cleanContactForm(nameField,emailField,messageField);
-    this.activContactForm(nameField,emailField,messageField,contactButton);
-  
+    this.activContactForm(nameField,emailField,messageField,contactButton) ;
   }
 
 
@@ -42,7 +40,7 @@ mailsending = false;
       this.mailsending = true;
       setTimeout(() => {
           this.mailsending= false;
-      }, 2500);
+      }, 1500);
   }
 
  async sendingMail(nameField,emailField,messageField){
@@ -51,7 +49,7 @@ mailsending = false;
    fd.append('name',nameField.value);
     fd.append('message',messageField.value);
 
-  await fetch('https://maximilian-bruhn.developerakademie.net/send_mail2/send_mail.php',
+    await fetch('https://maximilian-bruhn.developerakademie.net/send_mail2/send_mail.php',
   {
   method: 'POST',
   body: fd

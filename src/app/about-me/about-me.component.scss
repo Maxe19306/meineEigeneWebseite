@@ -1,159 +1,211 @@
 .container-about-me {
+    padding-bottom: 10%;
+    color: white;
     padding-left: 15%;
     padding-right: 15%;
-    padding-top: 50px;
-    background-color: #615F58;
-    color: white;
+    background-color: #141D2F;
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.links-social {
+    position: relative;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    a {
+        margin-right: 30px;
+        text-decoration: none;
+        color: white;
+        font-size: 23px;
+        &:hover {
+            color: #70E61C;
+        }
+        img {
+            height: 30px;
+            transition: all ease-in-out 225ms;
+            &:hover {
+                transform: scale(1.7);
+            }
+        }
+    }
+    .hl {
+        width: 100px;
+        height: 4px;
+        background-color: #9747FF;
+        position: absolute;
+    }
+}
+
+.application-image {
+    width: 400px;
+    height: 400px;
+    object-fit: contain;
+    border: 4px #70E61C solid;
+    border-radius: 100%;
+}
+
+.about-me-info {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    p {
+        font-size: 16px;
+    }
+}
+
+.about-me-text {
+    width: 60%;
+    position: relative;
+    z-index: 1;
+    h3 {
+        font-size: 90px;
+        margin: 0;
+    }
+}
+
+.about-me-single {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    .container-lines {
-        width: 100%;
-        margin-top: 20px;
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        .container-line {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 250px;
-            margin-right: 15px;
-            margin-left: 15px;
-            p {
-                text-align: center;
-            }
-            .image-container-about-me {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 50px;
-                width: 50px;
-                border-radius: 100%;
-                background-color: aquamarine;
-            }
-            img {
-                height: 25px;
-                object-fit: contain;
-            }
-        }
+    img {
+        height: 50px;
+        margin-right: 50px;
     }
-    .about-me {
-        width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        padding-bottom: 15px;
-        border-bottom: 2px solid aquamarine;
-        align-items: center;
-        img {
-            height: 250px;
-        }
-        p,
+}
+
+.vector-image {
+    position: absolute;
+    height: 971.56px;
+    width: 100%;
+    top: 194.6px;
+    left: 0;
+    right: 0;
+}
+
+.bg-image {
+    position: relative;
+    img {
+        position: absolute;
+        left: -250px;
+        bottom: 0;
+        height: 500px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .vector-image {
+        height: 750px;
+    }
+    .about-me-text {
         h3 {
-            text-align: center;
-            font-size: 25px;
-            width: 500px;
+            font-size: 79px;
+        }
+        p {
+            font-size: 14px;
         }
     }
 }
 
-.whiteContainerAboutMe {
-    background-color: rgb(236, 205, 163);
-    color: black;
-    .image-container-about-me {
-        background-color: green !important;
-    }
-    .about-me {
-        border-bottom: 2px solid green;
+@media (max-width: 1250px) {
+    .application-image {
+        width: 273px;
+        height: 273px;
     }
 }
 
-@media (max-width:930px) {
+@media (max-width: 1150px) {
     .container-about-me {
-        .about-me {
-            p {
-                font-size: 20px;
-            }
-            img {
-                height: 230px;
-            }
-        }
-        .container-lines {
-            flex-wrap: wrap;
-            font-size: 15px;
-            img {
-                height: 20px !important;
-            }
-            .container-line {
-                .image-container-about-me {
-                    height: 40px;
-                }
-            }
-        }
+        padding-bottom: 50px;
+        padding-top: 50px;
+    }
+    .application-image {
+        display: none;
+    }
+    .about-me-text {
+        text-align: center;
+        width: 100%;
     }
 }
 
-@media (max-width:890px) {
-    .container-about-me {
-        .about-me {
-            flex-direction: column;
+@media (max-width: 1000px) {
+    .vector-image {
+        height: 511px;
+    }
+    .about-me-text {
+        h3 {
+            font-size: 70px;
         }
+    }
+    .email {
+        display: none;
     }
 }
 
-@media (max-width:890px) {
+@media (max-width: 800px) {
     .container-about-me {
-        .container-lines {
-            justify-content: center;
-        }
+        padding-left: 10%;
+        padding-right: 10%;
     }
 }
 
-@media (max-width:650px) {
-    .container-about-me {
-        .about-me {
-            p {
-                width: 400px;
-            }
-        }
+@media (max-width: 750px) {
+    .vector-image {
+        height: 316px;
+        top: 274px;
     }
 }
 
-@media (max-width:480px) {
-    .container-about-me {
-        .about-me {
-            img {
-                height: 200px;
-            }
-            p {
-                width: 320px;
-                font-size: 17px;
-            }
+@media (max-width: 600px) {
+    .about-me-text {
+        h3 {
+            font-size: 65px;
         }
+    }
+    .container-about-me {
+        padding-left: 5%;
+        padding-right: 5%;
     }
 }
 
-@media (max-width:400px) {
-    .container-about-me {
-        .about-me {
-            p {
-                width: 250px;
-                font-size: 15px;
-            }
+@media (max-width: 450px) {
+    .vector-image {
+        height: 216px;
+        top: 410.6px;
+    }
+    .application-image {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+    .about-me-text {
+        width: 100%;
+        position: relative;
+        z-index: 4;
+        h3 {
+            font-size: 65px;
         }
-        .container-lines {
+        p {
             font-size: 13px;
         }
     }
 }
 
-@media (max-width:300px) {
-    .container-about-me {
-        .about-me {
-            p {
-                width: 190px;
-                font-size: 13px;
-            }
+@media (max-width: 395px) {
+    .vector-image {
+        height: 122px;
+        top: 375.6px;
+    }
+    .about-me-text {
+        h3 {
+            font-size: 40px;
+        }
+    }
+    .about-me-single {
+        img {
+            margin-right: 15px;
         }
     }
 }

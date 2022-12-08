@@ -8,7 +8,6 @@ import { AppComponent } from '../app.component';
 export class SkillsComponent implements OnInit {
 
   constructor(public main: AppComponent) { }
-  whiteMode = this.main.whiteMode;
   ngOnInit(): void {
   }
 

@@ -1,5 +1,9 @@
-<div [class.whiteContainerProjects]="this.main.whiteMode" id="container-projects" class="container-projects">
-    <h2 translate>Meine Projekte</h2>
+<div id="container-projects" class="container-projects">
+    <div class="headline">
+        <div class="hl1"></div>
+        <h2 translate>Projekte</h2>
+    </div>
+    <h3 translate>Diese Seite ist ein Beispiel meiner Arbeit - bitte zögern Sie nicht, sie auszuprobieren.</h3>
     <div class="container-buttons-projects">
         <button translate (click)="allProjects()">Alle</button>
         <button [class.buttonDisabled]="buttonAngular" translate (click)="AngularProjects()">Angular</button>
@@ -7,64 +11,55 @@
 
     </div>
     <div class="container-image-projects">
+        <div class="bg-image1">
 
-        <div (mouseenter)="openInfoElPollo()" (mouseleave)="closeInfoElPollo()" *ngIf="javascript" class="project-container">
+            <img src="assets/img/background/Purple shadow.png" alt="">
+        </div>
+        <div *ngIf="javascript" class="container-project">
+            <img src="/assets/img/projects/ElPolloLoco.png" alt="">
+            <div>
+                <p class="headline-project" translate>El Pollo Loco</p>
+                <p class="skills-project" translate>Javascript | HTML | CSS</p>
+                <p class="explanation-project" translate>El Pollo Loco - Ein run-and-jump Spiel mit Javascript
+                </p>
+                <div>
+                    <a target="_blank" href=""> <button class="testbutton">Live Test</button> </a>
+                    <a target="_blank" href="https://github.com/Maxe19306/El-Pollo-Loco"><button class="gitbutton"> Github</button></a>
+                </div>
+            </div>
+        </div>
 
-            <div *ngIf="infoElPollo" class="Info">
-                <p translate>El Pollo Loco - Ein run-and-jump Spiel mit Javascript</p>
-                <div class="project-container-links">
-                    <a target="_blank" href="https://maximilian-bruhn.developerakademie.net/El%20Pollo%20Loco/index.html" translate>austesten</a>
-                    <a target="_blank" href="https://github.com/Maxe19306/El-Pollo-Loco"> Git</a>
+        <div *ngIf="javascript" class="container-project column-revserse">
+            <div>
+                <p class="headline-project">Join</p>
+                <p class="skills-project">Javascript | HTML | CSS</p>
+                <p class="explanation-project" translate>Join - eine App für die Zuordnung der Aufgaben
+                </p>
+                <div>
+                    <a target="_blank" href=""> <button class="testbutton">Live Test</button> </a>
+                    <a target="_blank" href="https://github.com/Maxe19306/Join"><button class="gitbutton"> Github</button></a>
                 </div>
             </div>
 
-            <img src="./../assets/img/ElPolloLoco.png" alt="">
+            <img src="assets/img/projects/Join.png" alt="">
         </div>
+        <div class="bg-image2">
 
+            <img src="assets/img/background/GReen shadow.png" alt="">
+        </div>
+        <div *ngIf="angular" class="container-project">
+            <img src="assets/img/projects/portfolio.jpg" alt="">
+            <div>
+                <p class="headline-project">Portfolio</p>
+                <p class="skills-project">Javascript | HTML | CSS | Angular</p>
+                <p class="explanation-project" translate>Mein Portfolio - mit Angular programmiert
+                </p>
+                <div>
 
-
-        <div (mouseenter)="openInfoJoin()" (mouseleave)="closeInfoJoin()" *ngIf="javascript" class="project-container">
-
-            <div *ngIf="infoJoin" class="Info">
-                <p translate> Join - eine App für die Zuordnung der Aufgaben</p>
-                <div class="project-container-links">
-                    <a target="_blank" translate href="https://maximilian-bruhn.developerakademie.net/Join/index.html">austesten</a>
-                    <a target="_blank" href="https://github.com/Maxe19306/Join"> Git</a>
+                    <a target="_blank" href="https://github.com/Maxe19306/meineEigeneWebseite"><button class="gitbutton"> Github</button></a>
                 </div>
             </div>
-
-            <img src="./../assets/img/Join.png" alt="">
         </div>
-
-
-
-        <div (mouseenter)="openInfoPortfolio()" (mouseleave)="closeInfoPortfolio()" *ngIf="angular" class="project-container">
-
-
-
-            <div *ngIf="infoPortfolio" class="Info">
-                <p translate> Mein Portfolio - mit Angular programmiert</p>
-                <div class="project-container-links">
-                    <a target="_blank" href="https://github.com/Maxe19306/meineEigeneWebseite"> Git</a>
-                </div>
-            </div>
-            <img src="./../assets/img/portfolio.jpg" alt="">
-        </div>
-
-
-        <div (mouseenter)="openInfoPlaceholder()" (mouseleave)="closeInfoPlaceholder()" *ngIf="angular" class="project-container">
-
-
-            <div *ngIf="placeholder" class="Info">
-                <p> Placeholder - hier kommt ein zweites Angular Projekt hin</p>
-                <div class="project-container-links">
-                    <a translate href="">austesten</a>
-                    <a href=""> Git</a>
-                </div>
-            </div>
-            <img src="./../assets/img/Projecte-placeholder.png" alt="">
-        </div>
-
-
     </div>
+
 </div>
