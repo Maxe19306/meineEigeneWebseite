@@ -53,12 +53,12 @@ textarea {
     border-radius: 10px;
     width: 600px;
     padding-left: 25px;
+    padding-top: 5px;
     color: white;
     &:hover {
         border: 2px solid #70E61C;
     }
     &::placeholder {
-        padding-top: 15px;
         color: white;
     }
 }
@@ -68,7 +68,7 @@ input {
 }
 
 textarea {
-    padding: 15px, 25px, 15px, 25px;
+    padding-top: 15px;
     height: 200px;
     resize: none;
 }

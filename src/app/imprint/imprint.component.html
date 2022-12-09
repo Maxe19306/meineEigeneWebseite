@@ -1,4 +1,4 @@
-<div class='impressum-container'>
+<div *ngIf="!this.main.english" class='impressum-container'>
     <div>
         <h1>Impressum</h1>
         <p>Angaben gemäß § 5 TMG</p>
@@ -11,5 +11,21 @@
             Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
             Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen
             werden wir derartige Links umgehend entfernen.</p>
+    </div>
+</div>
+
+<div *ngIf="this.main.english" class='impressum-container'>
+    <div>
+        <h1>Imprint</h1>
+        <p>Information according to § 5 TMG</p>
+        <p>Maximilian Bruhn <br> Zeppelinstraße 16<br> 19306 Neustadt-Glewe <br>
+        </p>
+        <p> <strong>Represented by: </strong><br> Maximilian Bruhn<br>
+        </p>
+        <p><strong>Contact:</strong> <br> Telefon: 0172-20509985<br> E-Mail: <a href='mailto:maximilianbruhn@gmx.de'>maximilianbruhn@gmx.de</a></p>
+        <p><strong>Disclaimer: </strong><br><br><strong>Liability for links </strong><br><br> The website contains links to external websites of third parties, on whose contents we have no influence. Therefore, we can not guarantee for these external contents
+            take over. The respective provider or operator of the pages is always responsible for the contents of the linked pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content were not recognizable
+            at the time of linking. However, a permanent control of the content of the linked pages is not reasonable without concrete evidence of an infringement. Upon notification of legal violations, we will immediately remove.
+        </p>
     </div>
 </div>

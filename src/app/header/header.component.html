@@ -14,12 +14,12 @@
 
             </div>
             <div>
-                <p translate> <span (click)="this.main.translate.use('de')">DE</span>| <span (click)="this.main.translate.use('en')">EN</span></p>
+                <p translate> <span (click)="germanLanguage()">DE</span>| <span (click)="englishLanguage()">EN</span></p>
             </div>
 
             <div class="burger">
-                <img *ngIf="!burgerMenu" (click)="openBurgerMenu()" src="assets/img/burger.png" alt="">
-                <img *ngIf="burgerMenu" (click)="closeBurgerMenu()" src="assets/img/closeBurgerMenu.png" alt="">
+                <img *ngIf="!burgerMenu" (click)="openBurgerMenu()" src="./../assets/img/burger.png" alt="">
+                <img *ngIf="burgerMenu" (click)="closeBurgerMenu()" src="./../assets/img/closeBurgerMenu.png" alt="">
             </div>
 
         </div>
